@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions</title>
+    <link rel="stylesheet" href="interviews.css">
+</head>
+<body>
+    <!-- Login Button -->
+    <button class="login-btn" onclick="redirectToLogin()">Login</button> 
+
+    <!-- Quiz Button (Visible to everyone) -->
+    <button class="quiz-btn" onclick="redirectToQuiz()">Quiz</button>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- HR Interview Card -->
+        <div class="container hr-container">
+            <h1 class="glow-text">HR Round</h1>
+            <button class="menu-btn">⋮</button>
+            <button class="start-btn" onclick="selectTrack('HR')">Start Interview</button>
+        </div>
+
+        <!-- Technical Interview Card -->
+        <div class="container tech-container">
+            <h1 class="glow-text">Technical Round</h1>
+            <button class="menu-btn">⋮</button>
+            <button class="tech-btn" onclick="selectTrack('Java')">Java Questions</button>
+            <button class="tech-btn" onclick="selectTrack('Python')">Python Questions</button>
+            <button class="tech-btn" onclick="selectTrack('MERN')">MERN STACK Questions</button>
+            <button class="tech-btn" onclick="selectTrack('AI/ML')">AI/ML Questions</button>
+        </div>
+    </div>
+
+    <!-- Popup Message -->
+    <div id="popup" class="popup">
+        <p>Answer at least 3 questions to get better feedback.</p>
+    </div>
+
+    <script>
+        // Popup handling
+        document.querySelectorAll(".menu-btn").forEach((btn) => {
+            btn.addEventListener("click", function(event) {
+                event.stopPropagation();
+                var popup = document.getElementById("popup");
+                popup.classList.add("show");
+            });
+        });
+
+        function closeMessage() {
+            var popup = document.getElementById("popup");
+            popup.classList.remove("show");
+        }
+
+        document.addEventListener("click", function(event) {
+            var popup = document.getElementById("popup");
+            if (!event.target.closest(".menu-btn") && !popup.contains(event.target)) {
+                closeMessage();
+            }
+        });
+
+        // Track selection
+        function selectTrack(trackName) {
+            sessionStorage.setItem("track", trackName); // Changed to sessionStorage
+            if (trackName === "Java") {
+                window.location.href = "java-questions.html";
+            } else if (trackName === "Python") {
+                window.location.href = "python-questions.html";
+            } else if (trackName === "MERN") {
+                window.location.href = "mern-questions.html";
+            } else if (trackName === "AI/ML") {
+                window.location.href = "ai-ml-questions.html";
+            } else if (trackName === "HR") {
+                window.location.href = "questions.html";
+            }
+        }
+
+        // Redirect to login
+        function redirectToLogin() {
+            window.location.href = "index.html";
+        }
+
+        // Redirect to quiz based on role
+        function redirectToQuiz() {
+            const role = sessionStorage.getItem("role"); // Changed to sessionStorage
+
+            if (role === "faculty" ) {
+                window.location.href = "admin-quiz.html"; // Faculty goes to admin quiz
+            } else if (role === "student") {
+                window.location.href = "quiz-list.html"; // Students go to quiz list
+            }
+        }
+
+        // Quiz button is always visible, so no checkRoleAccess needed
+        window.onload = function() {
+            // No visibility logic here; button is always shown
+        };
+    </script>
+</body>
+</html>

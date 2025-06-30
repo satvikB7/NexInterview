@@ -1,0 +1,104 @@
+/* General body styling */
+body {
+    background: linear-gradient(135deg, #1e1e2e, #16213e); /* Dark gradient */
+    color: white;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Glow effect for title */
+.glow-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.6), 
+                 0 0 20px rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* Container styling - Glassmorphism effect */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    backdrop-filter: blur(12px); /* Glass effect */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Box zooms in on hover */
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+}
+
+/* Timer message */
+#timerMessage {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Performance message (if no analysis available) */
+#performanceMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+
+/* Chart container */
+#performanceChartContainer {
+    margin-top: 20px;
+}
+
+/* Performance chart */
+#performanceChart {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00d4ff, #007bff); /* Neon blue gradient */
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+    transition: 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+button:hover {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.8);
+    transform: translateY(-3px);
+}
+
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .glow-text {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,72 @@
+Question,Answer,Tips
+What is Artificial Intelligence (AI)?,AI is the simulation of human intelligence by machines.,"Know types: Narrow AI, General AI, and Super AI."
+What is Machine Learning (ML)?,ML is a subset of AI that allows systems to learn from data.,"Learn categories: supervised, unsupervised, and reinforcement learning."
+Difference between AI and ML?,AI is the broader concept; ML is a subset focused on learning from data.,Use real-world examples like chatbots vs spam filters.
+What is supervised learning?,Learning with labeled data to predict output.,"Examples: Linear Regression, Decision Trees."
+What is unsupervised learning?,Learning from data without labeled outputs.,"Examples: K-Means, PCA, Hierarchical Clustering."
+What is reinforcement learning?,Agents learn by taking actions in an environment to maximize reward.,Understand Markov Decision Processes (MDPs).
+What is deep learning?,Subset of ML using neural networks with many layers.,"Know about CNNs, RNNs, and their applications."
+What is a neural network?,"A model inspired by the human brain, consisting of layers of interconnected nodes.",Start with perceptron and work up to deep networks.
+What is overfitting?,When a model performs well on training data but poorly on new data.,Use regularization or more data to fix it.
+What is a model in ML?,A model is a mathematical representation learned from data.,Understand how training optimizes it.
+What is training data?,The dataset used to teach the model.,Ensure it's clean and representative of real-world scenarios.
+What is testing data?,Unseen data used to evaluate model performance.,Never train on test data.
+What is validation data?,Data used to tune model parameters and prevent overfitting.,Often used with cross-validation.
+What is accuracy?,Ratio of correct predictions to total predictions.,Works well only with balanced datasets.
+What is precision?,Ratio of true positives to all predicted positives.,Useful when false positives are costly.
+What is recall?,Ratio of true positives to all actual positives.,Useful when false negatives are costly.
+What is F1-score?,Harmonic mean of precision and recall.,Use when you need a balance between the two.
+What is a confusion matrix?,A table showing true vs predicted labels.,Helps in calculating all classification metrics.
+What is regression?,Predicting a continuous value.,Examples: Linear and Logistic Regression.
+What is classification?,Predicting categories or labels.,Binary and multiclass problems are common.
+What is clustering?,Grouping similar data points without labels.,K-Means and DBSCAN are key algorithms.
+What is dimensionality reduction?,Reducing the number of input features.,Use PCA or t-SNE for visualization and speed.
+What is feature selection?,Picking the most relevant features for model building.,Helps in improving accuracy and reducing overfitting.
+What is feature engineering?,Creating new input features from raw data.,Often improves model performance drastically.
+What is data preprocessing?,Cleaning and preparing raw data before modeling.,"Handle missing values, scaling, and encoding."
+What is normalization?,"Scaling data to a range, usually 0 to 1.",Good for distance-based models.
+What is standardization?,Transforming data to have mean 0 and standard deviation 1.,Preferred for models like SVMs and logistic regression.
+What is a loss function?,Measures the error between predicted and actual outputs.,"Common ones: MSE, Cross-Entropy."
+What is gradient descent?,Optimization algorithm to minimize loss.,"Learn types: batch, stochastic, mini-batch."
+What is backpropagation?,Algorithm to train neural networks using gradients.,Core concept in deep learning.
+What is an epoch in ML?,One full pass of the training dataset through the model.,"Usually, training needs multiple epochs."
+What is a batch size?,Number of samples processed before updating the model.,Trade-off between memory and performance.
+What is a learning rate?,Determines the step size during gradient descent updates.,Use learning rate schedulers or optimizers.
+What is regularization?,Technique to reduce overfitting by adding penalty to loss.,"L1 (sparse), L2 (smooth) are common forms."
+What is dropout in neural networks?,Randomly ignoring neurons during training to prevent overfitting.,Typically used in deep learning models.
+What is early stopping?,Halts training when performance stops improving.,Helps avoid overfitting.
+What is cross-validation?,Evaluating model by training/testing on different splits of the dataset.,K-Fold CV is most common.
+What is a decision tree?,A flowchart-like tree used for classification or regression.,"Easy to interpret, but prone to overfitting."
+What is random forest?,Ensemble of decision trees to improve accuracy.,Reduces variance by averaging results.
+What is bagging?,Training multiple models on different subsets of data.,Bootstrap Aggregation — reduces variance.
+What is boosting?,Sequentially trains models to fix errors of previous ones.,Gradient Boosting and AdaBoost are key examples.
+What is ensemble learning?,Combines predictions from multiple models.,Increases overall model robustness.
+What is KNN algorithm?,Classifies by majority vote of nearest neighbors.,"Simple, but slow with large data."
+What is SVM?,Finds optimal hyperplane to separate classes.,Effective in high-dimensional spaces.
+What is Naive Bayes?,Probabilistic classifier based on Bayes’ Theorem.,Works well with text and spam detection.
+What is PCA (Principal Component Analysis)?,Dimensionality reduction by projecting data to principal components.,Great for visualization and speeding up training.
+What is a ROC curve?,Plots true positive rate vs false positive rate.,Helps visualize model performance at all thresholds.
+What is AUC?,Area under ROC curve; higher AUC means better model.,"AUC of 1.0 is perfect, 0.5 means random guessing."
+What is a hyperparameter?,"Configuration set before training (e.g., learning rate).",Tune with grid search or random search.
+What is model evaluation?,"Assessing a model’s accuracy, precision, recall, etc.",Use test set metrics for honest evaluation.
+What is a pipeline in ML?,A sequence of data processing steps and model building.,Use Scikit-learn’s pipeline feature to automate.
+What are false positives/negatives?,Incorrect positive/negative predictions.,"Understand impact in domains like medicine, finance."
+What is data leakage?,When test data information is used during training.,Always split data before preprocessing.
+What is transfer learning?,Using a pre-trained model on a new but related task.,Widely used in NLP and computer vision.
+What is an activation function?,Adds non-linearity to neural networks.,"Common ones: ReLU, Sigmoid, Tanh."
+What is one-hot encoding?,Converts categorical values to binary vectors.,Use for nominal features in classification.
+What is label encoding?,Assigns numerical values to categories.,Works for ordinal data.
+What is the curse of dimensionality?,Performance degrades as dimensions increase.,Use dimensionality reduction to handle it.
+What is a use-case of AI in real life?,"AI is used in healthcare, chatbots, recommendation systems, etc.",Have 2-3 real examples ready to discuss in interviews.
+How do you handle missing data in a dataset?","Use methods like deletion, mean/median imputation, or predictive models.",Choose based on data size and importance of the feature.
+How do you choose the right model for a problem?",Try different algorithms and compare performance using validation data.,"Start with simple models, then increase complexity."
+When do you prefer logistic regression over decision trees?",When interpretability and linear relationships are important.,Use decision trees for complex or non-linear patterns.
+Can you explain the bias-variance tradeoff?,"High bias means underfitting, high variance means overfitting.	",Aim for a balance for optimal generalization.
+"Why is feature scaling important?	","It ensures features contribute equally, especially for distance-based algorithms.	",Always scale before using SVMs or KNNs.
+"What is a real-world use of clustering?	","Customer segmentation in marketing is a common use.	",Use clustering for pattern discovery in unlabeled data.
+"How do you prevent data leakage?	","Separate train-test data before any transformation.	",Talk about test data and train data
+"Why is cross-validation better than a single train-test split?	","It provides a more reliable estimate of model performance.	",Use k-fold CV for small datasets.
+"What's the difference between bagging and boosting?	","Bagging reduces variance; boosting reduces bias.	","Bagging trains in parallel, boosting sequentially."
+"What's your approach to a new ML project?	","Understand problem ? gather data ? preprocess ? model ? evaluate.	",Give steps to create a ML project
+"What's your experience with model deployment?	","I've used tools like Flask or FastAPI to serve models.	",Prepare for real-world data drift post-deployment.
+"What's your favorite ML algorithm and why?	","Depends on problem; Random Forest for general use, XGBoost for performance.	",Be honest and explain with examples.

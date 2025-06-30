@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - NexInterview</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="glow-text">🚀 Welcome to <span class="highlight">NexInterview</span></h1>
+
+    <div class="container">
+        <form id="registerForm">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <select id="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+            </select>
+            <input type="password" id="facultyCode" placeholder="Enter Faculty Code" style="display: none;">
+            <button type="submit">Register</button>
+        </form>
+        <p>Already registered? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

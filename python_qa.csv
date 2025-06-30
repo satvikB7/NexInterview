@@ -1,0 +1,70 @@
+Question,Answer,Tips
+"What is Python?","A high-level, interpreted programming language with simple syntax.",Use Python's standard library to your advantage.
+What are Python's key features?,"Interpreted, dynamic typing, OOP, and extensive libraries.",Master the basics before diving into libraries.
+What is PEP 8?,A style guide for Python code.,Use tools like flake8 or black for clean code.
+What are Python's data types?,"int, float, str, list, tuple, dict, set, bool.",Learn when to use each type efficiently.
+What is a list in Python?,A mutable sequence of elements.,Lists can contain mixed data types.
+What is a tuple?,An immutable sequence of elements.,Use tuples when data shouldn�t change.
+What is a dictionary?,A collection of key-value pairs.,Keys must be unique and hashable.
+What is a set?,A collection of unique elements.,Great for membership testing and removing duplicates.
+What is the difference between is and ==?,"is checks identity, == checks equality.",Use == for value comparison.
+What are Python's logical operators?,"and, or, not.",Combine conditions using and/or.
+What is indentation in Python?,"Defines code blocks, replaces {}.",Use 4 spaces consistently.
+"What is a function in Python?",A reusable block of code.,Use functions to avoid repetition.
+What are *args and **kwargs?,For variable number of arguments.,Use them for flexible function definitions.
+What is a lambda function?,An anonymous one-line function.,"Use for short, simple functions."
+What is a module in Python?,A file containing Python code.,"	Import only what you need using from."
+What is a package?,A collection of Python modules.,Use __init__.py to mark a directory as a package.
+What is the use of self in Python?,Refers to the current object in a class.,It�s not a keyword but a naming convention.
+"What is __init__?",The constructor method for a class.,Automatically called when an object is created.
+What is inheritance in Python?,Allows one class to inherit from another.,Supports code reuse and OOP design.
+"What is polymorphism in Python?",Ability to use functions with different data types.,Enables flexible code through overloading or overriding.
+What is encapsulation?,Restricting access to methods and variables.,talk about restrictions
+"What is abstraction?",Hiding internal implementation details.,Use abstract base classes with abc module.
+What is a generator?,"	A function that yields values one at a time.",Use yield to save memory for large data.
+What is a decorator?,A function that modifies another function.,"Great for logging, access control, etc."
+What is the use of with statement?,Used for resource management.,Auto-closes file or resource to prevent leaks.
+What is exception handling in Python?,Handling runtime errors using try-except.,Always catch specific exceptions.
+What is finally block in Python?,Executes code regardless of exceptions.,Useful for cleanup actions.
+"What is the difference between break, continue, and pass?","break exits loop, continue skips, pass does nothing.",stopping conditions.
+What is a docstring?,"	A string used for documenting functions/classes.","Use triple quotes """""" for clarity."
+What are list comprehensions?,"	A concise way to create lists.",Improves readability and speed.
+What is slicing in Python?,"	Extracting a part of a sequence.",Syntax: sequence[start:end:step].
+What is the id() function?,Returns the memory address of an object.,Useful to check object identity.
+What is mutability?,"	Whether an object�s value can be changed.","Lists are mutable, tuples are not."
+What is a shallow copy?,"A copy of an object, not nested objects.",Use copy() method for shallow copy.
+What is a deep copy?,A copy of object and nested objects.,Use copy.deepcopy() from copy module.
+What is None in Python?,A special constant representing null/absence.,Default return for functions with no return.
+"What is __name__ == ""__main__"" used for?",To check if the script is run directly.,Useful for code modularity.
+What is recursion?,A function calling itself.,"	Always define a base case to avoid errors."
+"How to reverse a list in Python?",Use list[::-1] or list.reverse().,[::-1] creates a reversed copy.
+What is map() function?,"	Applies a function to all items in an iterable.",Combine with lambda for concise code.
+What is filter() function?,Filters elements using a function that returns True/False.,Use with lambda for simple filters.
+What is zip() function?,"	Combines multiple iterables into tuples.",Great for looping through multiple lists.
+What is enumerate() function?,"	Returns index and value while looping.",Useful when you need index with item.
+What is range() used for?,Generates a sequence of numbers.,range(n) gives 0 to n-1.
+What is a virtual environment?,Isolated environment for Python packages.,Use venv or virtualenv.
+"How to install packages in Python?",Using pip: pip install package_name.,Use requirements.txt for projects.
+What is the math module?,Provides mathematical functions.,Import with import math.
+How do you handle files in Python?,"Using open(), read(), write(), close().",Different file operations.
+"What is f-string in Python?","	A way to format strings using {}.","Use f""Value is {x}"" for cleaner syntax."
+What are magic methods?,"	Special methods with __ like __init__, __str__.",Used to define object behavior.
+What is type() in Python?,Returns the type of an object.,Helpful for debugging.
+What is a class in Python?,"	A blueprint for creating objects.",Use class ClassName: syntax.
+What is an object?,An instance of a class.,Created by calling the class.
+What is method overriding?,Redefining a method in a subclass.,Enables polymorphism.
+What is method overloading in Python?,Not directly supported but can mimic with *args.,Handle logic inside one method.
+What is the difference between @staticmethod and @classmethod?,"staticmethod doesn�t access class, classmethod does.",Use based on whether class data is needed.
+How to convert string to int?,"Use int(""123"").","Give a programming code, Always validate input."
+What is slicing used for?,"	Extracts a part of a list, string, or tuple.",Use negative indices to slice from end.
+How to merge two dictionaries?,"Use {**dict1, **dict2} in Python 3.5+.",Or use dict1.update(dict2).
+How to sort a list?,"	Use sorted() or list.sort().",Use key argument for custom sort.
+"What are Python's keywords?","	Reserved words like def, if, else.",Don�t use as variable names.
+What is the Global Interpreter Lock (GIL)?,Prevents multiple native threads in CPython.,Affects CPU-bound multi-threading.
+"What is multiprocessing in Python?",Running code in separate processes.,Use for CPU-bound tasks.
+What is multithreading in Python?,Running code in separate threads.,Use for I/O-bound tasks.
+What is a queue?,A FIFO data structure.,Use queue.Queue for thread-safe operations.
+"What is a stack?",A LIFO data structure.,Use list with append()/pop().
+What is the use of assert?,Debugging tool to test conditions.,Use only in development.
+"What are Python libraries?",Pre-written code for common tasks.,"Examples: NumPy, Pandas, Requests."
+What are iterators in Python?,"	Objects with __next__() method.",Use iter() to get an iterator from iterable.

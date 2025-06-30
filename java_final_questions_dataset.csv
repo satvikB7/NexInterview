@@ -1,0 +1,71 @@
+Question,Answer,Tips
+What is Java?,"Java is a high-level, object-oriented programming language developed by Sun Microsystems.",Understand Java basics and its key features.
+What are the key features of Java?,"Key features include Object-Oriented, Platform Independent, Secure, Robust, and Multithreading.",Learn each feature in detail with examples.
+What is JVM?,JVM (Java Virtual Machine) is an abstract machine that enables a computer to run Java programs.,Understand JVM architecture for better performance tuning.
+"What is the difference between JDK, JRE, and JVM?","JDK is the development kit, JRE is the runtime environment, and JVM is the virtual machine that runs Java bytecode.","Know the differences between JDK, JRE, and JVM."
+What are Java access modifiers?,"Java has four access modifiers: private, default, protected, and public.",Use appropriate access modifiers to control class member visibility.
+What is encapsulation?,Encapsulation is a concept where data (variables) and code (methods) are wrapped together into a single unit.,Use getters and setters to implement encapsulation in Java.
+What is inheritance?,Inheritance is a mechanism where one class acquires the properties and behaviors of another class.,Use the 'extends' keyword to implement inheritance in Java.
+What is polymorphism?,"Polymorphism allows one interface to be used for multiple functionalities, implemented using method overloading and overriding.",Learn method overloading vs. method overriding.
+What is abstraction?,Abstraction is the process of hiding implementation details and showing only the necessary features of an object.,Use abstract classes and interfaces for abstraction.
+What is an interface in Java?,An interface is a reference type in Java that contains only abstract methods.,Use interfaces to achieve full abstraction and multiple inheritance.
+What is the difference between an abstract class and an interface?,"An abstract class can have implemented methods, while an interface contains only abstract methods (before Java 8).",Use an abstract class when you have shared behavior among subclasses.
+What is method overloading?,Method overloading allows multiple methods in the same class to have the same name but different parameters.,Use method overloading for code reusability and clarity.
+What is method overriding?,Method overriding allows a subclass to provide a specific implementation of a method already defined in its superclass.,Use the '@Override' annotation to ensure proper overriding.
+What is the difference between static and non-static methods?,"Static methods belong to the class, while non-static methods belong to an instance of the class.",Use static methods when you don't need to access instance variables.
+What are constructors in Java?,Constructors are special methods used to initialize objects in Java.,A constructor must have the same name as the class and has no return type.
+What is the difference between a constructor and a method?,"A constructor initializes an object, while a method defines behavior and can return a value.",Constructors do not have a return type.
+What is the 'this' keyword in Java?,The 'this' keyword refers to the current instance of the class.,Use 'this' to differentiate between instance variables and parameters with the same name.
+What is the 'super' keyword in Java?,The 'super' keyword refers to the parent class and is used to call the superclass constructor and methods.,Use 'super()' in a subclass constructor to call the parent class constructor.
+What is a static block in Java?,A static block is used to initialize static variables and is executed when the class is loaded.,Use static blocks for complex static initializations.
+"What is the difference between 'final', 'finally', and 'finalize'?","'final' is used for constants, 'finally' is a block in exception handling, and 'finalize' is a method called before garbage collection.",Know when to use 'final' to prevent method overriding.
+"What is the difference between String, StringBuilder, and StringBuffer?","String is immutable, while StringBuilder and StringBuffer are mutable. StringBuffer is thread-safe.",Use StringBuilder when performance is critical.
+What is garbage collection in Java?,Garbage collection is the process of automatically deallocating memory by removing unused objects.,"Understand different garbage collectors like G1, CMS, and Parallel GC."
+What is the difference between HashMap and HashTable?,"HashMap is not synchronized, while HashTable is synchronized and thread-safe.",Use HashMap for better performance when thread safety is not needed.
+What is multithreading in Java?,Multithreading is the concurrent execution of two or more threads for maximum CPU utilization.,Use the Runnable interface or Thread class to create threads.
+What is synchronization in Java?,Synchronization is a mechanism that controls the access of multiple threads to shared resources.,Use synchronized blocks for better performance instead of synchronizing entire methods.
+What is a lambda expression in Java?,"A lambda expression is a short block of code that takes parameters and returns a value, introduced in Java 8.",Use lambda expressions to make code concise and readable.
+What is the Stream API in Java?,Stream API is used to process collections of data in a functional programming style.,"Use Streams to perform operations like filtering, mapping, and reducing efficiently."
+What are default methods in interfaces?,"Default methods allow interfaces to have method implementations, introduced in Java 8.",Use default methods to add new functionalities to interfaces without breaking existing implementations.
+What is Optional in Java?,"Optional is a container object that may or may not contain a value, introduced in Java 8.",Use Optional to avoid NullPointerExceptions.
+What is the difference between checked and unchecked exceptions?,"Checked exceptions must be handled at compile-time, while unchecked exceptions occur at runtime.",Handle checked exceptions using try-catch or throws keyword.
+What is the difference between '==' and '.equals()'?,"'==' compares object references, while '.equals()' compares object values.",Override '.equals()' method to compare custom objects correctly.
+What is dependency injection in Java?,Dependency Injection is a design pattern that removes the dependency of classes by injecting objects externally.,Use frameworks like Spring for dependency injection.
+What is the SOLID principle?,SOLID stands for five design principles for writing maintainable and scalable software.,Follow SOLID principles for better code structure.
+What is method reference in Java?,Method reference is a shorthand notation of a lambda expression to refer to a method directly.,Use method references to simplify lambda expressions.
+What is the difference between an Iterator and a ListIterator?,"Iterator allows forward iteration, whereas ListIterator allows both forward and backward iteration.",Use ListIterator when bidirectional traversal is needed.
+What is a functional interface?,A functional interface is an interface that contains exactly one abstract method.,Use '@FunctionalInterface' annotation to ensure compliance.
+What are the different types of inner classes in Java?,"Java has four types: Nested, Static, Local, and Anonymous inner classes.",Use inner classes when encapsulating helper functionality inside another class.
+What is a daemon thread?,A daemon thread is a background thread that terminates when all user threads are finished.,Use 'setDaemon(true)' to make a thread a daemon thread.
+What is the volatile keyword in Java?,Volatile ensures that changes to a variable are immediately visible to all threads.,Use volatile for variables accessed by multiple threads to avoid caching issues.
+What is the difference between 'synchronized' and 'Lock' in Java?,"'synchronized' is implicit and simpler, whereas 'Lock' provides more control and flexibility.",Use ReentrantLock when finer-grained thread control is needed.
+What is the CopyOnWriteArrayList in Java?,CopyOnWriteArrayList is a thread-safe variant of ArrayList where all mutative operations result in a new copy.,Use CopyOnWriteArrayList for scenarios with frequent reads and rare writes.
+What is the difference between TreeSet and HashSet?,"TreeSet maintains elements in sorted order, whereas HashSet does not guarantee order.",Use TreeSet when sorting is required.
+What is the difference between a shallow copy and a deep copy?,"A shallow copy copies references, while a deep copy creates new independent objects.",Use deep copy to avoid unintended modifications in cloned objects.
+What is a memory leak in Java?,A memory leak occurs when objects are not garbage collected due to lingering references.,Use profiling tools like VisualVM to detect memory leaks.
+What is the 'transient' keyword in Java?,Transient is used to exclude fields from serialization.,Use transient for sensitive data that should not be persisted.
+What is the difference between 'Serializable' and 'Externalizable'?,"Serializable uses reflection, while Externalizable requires custom read and write methods.",Use Externalizable for better performance with large objects.
+What is Java Reflection API?,"Reflection API allows inspection and modification of classes, methods, and fields at runtime.",Use Reflection sparingly due to performance overhead.
+What is the difference between 'Predicate' and 'Function' interfaces in Java?,"Predicate takes one argument and returns a boolean, while Function takes one argument and returns a value.",Use Predicate for filtering and Function for transformations.
+What is a CompletableFuture in Java?,CompletableFuture is an advanced feature for asynchronous programming.,Use CompletableFuture to handle multiple async tasks efficiently.
+What is Fork/Join framework in Java?,Fork/Join framework is used for parallel execution by splitting tasks into subtasks.,Use ForkJoinPool for large-scale parallel processing.
+What is the 'record' keyword in Java?,'record' is a special class type that provides immutable data containers.,Use records to simplify data objects and avoid boilerplate code.
+What is the purpose of the 'yield' method in Java?,'yield' suggests that the current thread should pause and allow others to execute.,Use 'yield' for cooperative multitasking scenarios.
+What is a WeakHashMap in Java?,"WeakHashMap stores keys with weak references, allowing them to be garbage collected.",Use WeakHashMap for caching scenarios to prevent memory leaks.
+What is the difference between 'peek' and 'map' in Streams?,"'peek' is for debugging, whereas 'map' transforms elements.",Use 'peek' for debugging and 'map' for transformations.
+What is type inference in Java?,"Type inference allows the compiler to determine types automatically, introduced with 'var' in Java 10.",Use 'var' for concise and readable code.
+Why are pointers not used in Java?,Java uses references instead of pointers for memory safety.,Know about pointers
+Why are strings immutable in Java?,"Strings are immutable for security, synchronization, and performance reasons.",Use StringBuilder for efficient string modifications.
+What is a ThreadLocal variable in Java?,ThreadLocal provides thread-specific variables that are isolated from other threads.,Use ThreadLocal to store user session information per thread.
+What is the difference between 'var' and 'final var' in Java?,"'var' allows type inference, while 'final var' ensures immutability.",Use 'final var' when you want inferred but immutable variables.
+What is method chaining in Java?,Method chaining is calling multiple methods in a single statement.,Use method chaining for a fluent API design.
+What is an enum in Java?,An enum is a special class representing a fixed set of constants.,"Use enums for defining categories like directions, days, etc."
+Why is Java a platform-independent language?,Java compiles into bytecode that runs on any JVM.,Write code once and run it anywhere with JVM support.
+Why is Java not a pure object-oriented language?,Java has primitive data types that are not objects.,Talk about data types
+Describe the break statement in Java.,break terminates the nearest enclosing loop or switch statement.,Use break wisely to prevent infinite loops or unnecessary iterations.
+What is the string pool in Java?,String pool is a special memory region for storing string literals.,A type of memory region
+How to convert string to int in Java?,"Use Integer.parseInt(""123"") or Integer.valueOf(""123"").",Give the one Program line for conversion
+What is the life cycle of a thread in Java?,"A thread has five states: New, Runnable, Blocked, Waiting, and Terminated.",Tell about 5 types of thread steps
+What is the static keyword in Java and what is a static variable in Java?,The static keyword makes a variable or method belong to the class rather than instances.,Use static variables for shared constants and utility methods.
+What are identifiers in Java?,"Identifiers are names assigned to variables, methods, classes, etc.", Always use meaningful and readable identifiers for better code clarity.
+What are Wrapper Classes in Java?,Wrapper classes provide object representations for primitive data types.,Use wrapper classes when working with collections that require objects.

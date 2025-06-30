@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Quiz Setup</title>
+  <link rel="stylesheet" href="admin-quiz.css" />
+  <!-- Select2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <button class="back-interviews-btn" onclick="redirectToInterviews()">Back to Interviews</button>
+
+  <div class="admin-container">
+    <h1>Quiz Configuration</h1>
+
+    <div class="selection-panel">
+      <h2>Select Topics</h2>
+      <select id="topicSelect" name="topics" multiple>
+        <option value="Java">Java</option>
+        <option value="Python">Python</option>
+        <option value="MERN">MERN</option>
+        <option value="AI/ML">AI/ML</option>
+        <option value="HR">HR</option>
+      </select>
+    </div>
+
+    <div class="settings-panel">
+      <label for="quizTimer">Quiz Duration (minutes):</label>
+      <input type="number" id="quizTimer" min="1" placeholder="e.g., 15" />
+      
+      <label for="quizSchedule">Schedule Time:</label>
+      <input type="datetime-local" id="quizSchedule" />
+    </div>
+
+    <button id="generateQuizBtn">Generate Quiz</button>
+    <button id="viewQuizListBtn">View Quiz List</button>
+
+    <div id="quizPreview" class="quiz-preview">
+      <!-- Preview list of 10 questions will appear here -->
+    </div>
+  </div>
+
+  <!-- PapaParse for CSV reading -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <script src="admin-quiz.js"></script>
+</body>
+</html>

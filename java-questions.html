@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Practice</title>
+    <link rel="stylesheet" href="questions.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="glow-text">Java Question</h2>
+        <p id="question">Loading question...</p>
+        <textarea id="answer" placeholder="Type your answer here..."></textarea>
+
+        <p id="validationMessage" style="color: #ff4d4d; font-weight: bold;"></p>
+
+        <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+        <p id="feedback"></p>
+        <p id="tips"></p>
+
+        <!-- Clickable "Next Question" text -->
+        <p id="nextQuestionOptions" onclick="loadQuestion()">Do you want the next question?</p>
+
+        <!-- View Performance Analysis Button -->
+        <button class="performance-btn" onclick="viewPerformance()">View Performance Analysis</button>
+    </div>
+    
+    <script src="java-questions.js"></script>
+    <script>
+        function viewPerformance() {
+            window.location.href = "performance.html";
+        }
+    </script>
+</body>
+</html>

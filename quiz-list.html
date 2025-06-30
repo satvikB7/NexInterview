@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz List</title>
+  <link rel="stylesheet" href="quiz-list.css" />
+</head>
+<body>
+  <div class="quiz-list">
+    <h1 class="glow-text">Scheduled Quizzes</h1>
+    <button class="top-back-btn" onclick="window.location.href='interviews.html'">Back to Interview</button>
+    <button class="quiz-creation-btn" onclick="window.location.href='admin-quiz.html'" style="display: none;">Quiz Creation</button>
+    <div id="quizList"></div>
+  </div>
+  <script>
+    function loadQuizList() {
+      const userId = sessionStorage.getItem("userId");
+      const role = sessionStorage.getItem("role");
+      let url = "http://localhost:8000/api/quiz/list";
+      if (userId) {
+        url += `?userId=${userId}`;
+      }
+
+      fetch(url, { cache: "no-store" })
+        .then(response => {
+          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+          return response.json();
+        })
+        .then(quizzes => {
+          console.log("Fetched quizzes:", quizzes); // Debug: Log the response
+          const container = document.getElementById("quizList");
+          container.innerHTML = "";
+          if (!Array.isArray(quizzes) || quizzes.length === 0) {
+            container.innerHTML = "<p>No quizzes available.</p>";
+          } else {
+            quizzes.forEach(quiz => {
+              const div = document.createElement("div");
+              div.className = `quiz-item ${quiz.status.toLowerCase()}`;
+              div.innerHTML = `
+                <h3>Quiz ID: ${quiz.id}</h3>
+                <p>Topics: ${Array.isArray(quiz.topics) ? quiz.topics.join(", ") : "N/A"}</p>
+                <p>Duration: ${quiz.duration} minutes</p>
+                <p>Scheduled: ${new Date(quiz.scheduleTime).toLocaleString()}</p>
+                <p>Status: ${quiz.status}</p>
+                <p>Score: ${quiz.score !== null && quiz.score !== undefined ? quiz.score : "Not submitted"}</p>
+              `;
+              // Make all quizzes clickable, regardless of status
+              div.onclick = () => {
+                console.log(`Clicked quiz: ${quiz.id}, Status: ${quiz.status}`); // Debug: Log click
+                window.location.href = `student-quiz.html?quizId=${quiz.id}`;
+              };
+              container.appendChild(div);
+            });
+          }
+        })
+        .catch(error => {
+          console.error("Error loading quiz list:", error);
+          document.getElementById("quizList").innerHTML = "<p>Error loading quizzes.</p>";
+        });
+    }
+
+    function checkRoleAccess() {
+      const role = sessionStorage.getItem("role");
+      const isVerified = sessionStorage.getItem("isVerified") === "true";
+      const quizCreationBtn = document.querySelector(".quiz-creation-btn");
+
+      if (role === "faculty" && isVerified) {
+        quizCreationBtn.style.display = "block";
+      } else {
+        quizCreationBtn.style.display = "none";
+      }
+    }
+
+    window.onload = function() {
+      loadQuizList();
+      checkRoleAccess();
+    };
+
+    setInterval(loadQuizList, 60000); // Refresh every minute
+  </script>
+</body>
+</html>

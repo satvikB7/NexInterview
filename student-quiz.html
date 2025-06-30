@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Quiz</title>
+  <link rel="stylesheet" href="student-quiz.css" />
+  <!-- Include html2canvas library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="quiz-container">
+    <div class="header">
+      <h1 class="glow-text">Quiz Time!</h1>
+
+      <div style="position: relative; text-align: right;">
+        <button id="downloadPage" class="download-btn"  >
+          <img src="download icon.png" alt="Download" />
+        </button>
+        <div id="timer"></div>
+      </div>
+      
+    </div>
+
+    <div id="quizContent">
+      <!-- Quiz questions or status messages will be loaded here -->
+    </div>
+    <button id="submitQuizBtn" type="button" class="submit-btn">Submit Quiz</button>
+    <button id="backToQuizListBtn" class="back-btn">Back to Quiz List</button>
+    <div id="result"></div>
+  </div>
+  <script src="student-quiz.js"></script>
+</body>
+</html>

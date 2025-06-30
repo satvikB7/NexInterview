@@ -1,0 +1,214 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General body styling */
+body {
+    background: linear-gradient(135deg, #1e1e2e, #16213e);
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Layout for placing HR and Technical round cards side by side */
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 1000px;
+}
+
+/* Glowing heading effect */
+.glow-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.6), 
+                 0 0 20px rgba(255, 255, 255, 0.4);
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Glassmorphism Card Container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Hover Effect */
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+}
+
+/* HR and Technical Container Placement */
+.hr-container {
+    margin-top: 2px;
+}
+
+.tech-container {
+    margin-left: 20px;
+}
+
+/* Three-dot Menu Button */
+.menu-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+
+.menu-btn:hover {
+    color: #48dbfb;
+}
+
+/* Start Interview Button */
+.start-btn {
+    margin-top: 50px;
+    padding: 14px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff8c00, #ff4500);
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.start-btn:hover {
+    background: linear-gradient(45deg, #ffa500, #ff6347);
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.7);
+    transform: translateY(-3px);
+}
+
+/* Technical Interview Buttons */
+.tech-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.tech-btn:hover {
+    background: linear-gradient(45deg, #5dade2, #2471a3);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+    transform: translateY(-3px);
+}
+
+/* Popup Message */
+.popup {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(42, 42, 42, 0.9);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    width: 350px;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+}
+
+/* Show popup */
+.popup.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Login Button */
+.login-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00ff00, #00cc00);
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: linear-gradient(45deg, #00cc00, #009900);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.8);
+    transform: translateY(-3px);
+}
+
+
+.quiz-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Top-right corner */
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #9b59b6, #8e44ad); /* Purple gradient */
+    color: white;
+    box-shadow: 0 0 20px rgba(155, 89, 182, 0.6);
+    transition: 0.3s;
+}
+
+.quiz-btn:hover {
+    background: linear-gradient(45deg, #8e44ad, #6c3483);
+    box-shadow: 0 0 25px rgba(155, 89, 182, 0.8);
+    transform: translateY(-3px);
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hr-container, .tech-container {
+        margin: 10px 0;
+    }
+
+    .login-btn, .quiz-btn {
+        position: static; 
+        margin: 10px auto;
+        width: 50%;
+    }
+}

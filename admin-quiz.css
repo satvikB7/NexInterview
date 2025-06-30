@@ -1,0 +1,142 @@
+body {
+  background: #1e1e2e;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.admin-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  width: 400px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.selection-panel {
+  margin: 20px 0;
+}
+
+.selection-panel h2 {
+  margin-bottom: 10px;
+}
+
+/* Style Select2 */
+.select2-container {
+  width: 100% !important;
+  text-align: left;
+}
+
+.select2-selection--multiple {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  min-height: 38px;
+}
+
+.select2-selection__rendered {
+  line-height: 28px;
+}
+
+.select2-selection__choice {
+  background-color: #007BFF;
+  border: none;
+  color: black; 
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.select2-selection__choice__remove {
+  color: white; /* Keep remove button white for visibility */
+  margin-right: 5px;
+}
+
+.select2-dropdown {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.select2-results__option {
+  padding: 8px;
+  color: #333;
+}
+
+.select2-results__option--highlighted {
+  background-color: #007BFF;
+  color: white;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #00d4ff, #007bff);
+  color: white;
+  margin: 5px;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #00b8e6, #0069d9);
+}
+
+#viewQuizListBtn {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+}
+
+#viewQuizListBtn:hover {
+  background: linear-gradient(45deg, #e65c5c, #e67847);
+}
+
+input[type="number"],
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+.quiz-preview {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.quiz-preview h3 {
+  margin-bottom: 10px;
+}
+
+.quiz-preview ol {
+  padding-left: 20px;
+}
+
+.back-interviews-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #9b59b6, #8e44ad); /* Matches Quiz button from interviews.css */
+  color: white;
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.6);
+  transition: 0.3s;
+}
+
+.back-interviews-btn:hover {
+  background: linear-gradient(45deg, #8e44ad, #6c3483);
+  box-shadow: 0 0 25px rgba(155, 89, 182, 0.8);
+  transform: translateY(-3px);
+}

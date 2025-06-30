@@ -1,0 +1,63 @@
+Question,Answer,Tips
+What is the MERN stack?,"A full-stack development stack using MongoDB, Express.js, React.js, and Node.js.",Learn each layer individually before integrating.
+What is MongoDB?,"A NoSQL, document-based database that stores data in JSON-like format.",Use Mongoose for schema and validation.
+What is Express.js?,A Node.js framework for building backend APIs.,Keep routes modular for maintainability.
+What is React.js?,A JavaScript library for building user interfaces.,Use component-based architecture for reusability.
+What is Node.js?,A JavaScript runtime built on Chrome's V8 engine for backend development.,Use npm packages to extend functionality.
+What is JSX in React?,"Syntax that allows HTML to be written in JavaScript.	",Use parentheses to wrap multiline JSX.
+What is state in React?,An object that determines component rendering and behavior.,Use useState for functional components.
+What are props in React?,"Data passed from parent to child components.	",Props are read-only; use state for changeable data.
+"What is a component in React?","A reusable piece of UI.	","Create small, focused components."
+What is routing in React?,"Navigation between pages using React Router.	",Use react-router-dom for web apps.
+How do you handle forms in React?,"Use controlled components with state.	",Bind inputs to state for full control.
+What is lifting state up in React?,"Moving state to a common ancestor component.	",Enables sibling components to share data.
+What is the virtual DOM?,"A lightweight copy of the real DOM used by React.	",Helps improve UI rendering performance.
+What are hooks in React?,"Functions like useState and useEffect for managing state and side effects.	",Always call hooks at the top level.
+"What is useEffect used for?","Handling side effects like API calls or timers.	",Always include a dependency array.
+What is context API in React?,"A way to pass data through the component tree without props.	",Use it to avoid prop drilling.
+What is Mongoose?,"An ODM (Object Data Modeling) library for MongoDB.	",Use schemas to enforce data consistency.
+How do you create an Express server?,"Use express() and define routes with app.get(), app.post(), etc.	",Always handle errors and undefined routes.
+How do you connect MongoDB to Node.js?,"Use mongoose.connect() with a MongoDB URI.	",Handle connection errors with try-catch.
+"What is REST API?","API that conforms to REST architectural style using HTTP methods.	",Use correct status codes and routes.
+What is CORS?,"A security feature that restricts cross-origin HTTP requests.	",Use cors middleware in Express.
+"What is async/await in Node.js?","Syntax for handling asynchronous operations more cleanly.	",Always wrap in try-catch for error handling.
+"What is JSON?","JavaScript Object Notation, used for data interchange.	",Use res.json() to send JSON responses.
+What is npm?,"Node Package Manager for managing libraries.	",Use package.json to manage dependencies.
+How to handle errors in Express?,"Use try/catch, or error-handling middleware.	",Define a global error handler.
+How to secure passwords in Node.js?,"Use bcrypt to hash and compare passwords.	",Never store raw passwords.
+What is JWT?,"JSON Web Token, used for secure data transmission.	",Use it for user authentication.
+How to authenticate users?,"Check credentials and return a JWT token.	",Store the token in localStorage or cookies.
+How to protect routes?,"Use JWT middleware to verify tokens before allowing access.	",Return 401 for unauthorized access.
+"How to deploy MERN app?","Frontend: Vercel/Netlify, Backend: Heroku/Render.	",Set environment variables securely.
+What is dotenv?,"A package to manage environment variables.	",Store secrets like DB URI and JWT_SECRET here.
+"What is the purpose of .env?",To hide sensitive configuration details.,Never push .env to GitHub.
+"What is Redux?",A state management library for JavaScript apps.,Use Redux Toolkit for simpler setup.
+What is Axios?,A promise-based HTTP client for the browser and Node.js.,Use interceptors for token handling.
+Difference between PUT and PATCH?,"PUT replaces, PATCH modifies.",Use PATCH for partial updates.
+How do you use MongoDB Atlas?,A cloud-hosted MongoDB database service.,Use the connection string with credentials.
+What is the schema in Mongoose?,Defines the structure of a document in MongoDB.,Helps in validation and consistency.
+What is useRef in React?,A hook to access DOM nodes or persist values.,Useful for focusing inputs or timers.
+What is SQL vs NoSQL?,SQL is relational; NoSQL is non-relational.,Choose based on your data model.
+What is EJS?,A templating engine for rendering HTML with Node.js.,Useful for server-side rendering.
+What is the role of package.json?,Manages app metadata and dependencies.,Keep scripts organized here.
+"What are controlled components in React?",Form elements controlled by React state.,Required for form validation.
+"How do you paginate in MongoDB?",Use .skip() and .limit() in queries.,Combine with query parameters.
+How do you filter data in MongoDB?,Use find() with query conditions.,Use $regex for partial text search.
+How do you delete a document in MongoDB?,Use Model.deleteOne() or deleteMany().,Always validate before deleting.
+How to handle image uploads?,Use multer in Express.,Store on Cloudinary or S3 for production.
+"What is component lifecycle?","Phases like mounting, updating, and unmounting.",Use useEffect() to hook into lifecycle.
+"How to create a private route in React?",Check auth status before rendering component.,Use custom route wrappers.
+"How to logout in MERN?",Clear token from storage and reset user state.,Redirect to login page after logout.
+How to use MongoDB queries?,"Use .find(), .sort(), .limit() etc.",Types of queries
+What is client-server architecture?,"Model where client sends requests, server responds.",MERN follows this pattern.
+What is SSR vs CSR?,Server-Side vs Client-Side Rendering.,SSR is better for SEO; CSR for interactivity.
+What is Helmet in Express?,Middleware for setting secure HTTP headers.,Helps prevent common vulnerabilities.
+What is React Fragment?,A wrapper component that doesn't render extra DOM.,Use <></> for clean JSX.
+"What is the difference between var, let, and const?",var is function-scoped; let & const are block-scoped.,Prefer const unless reassignment is needed.
+"What is debounce?",Delays a function call until after a wait time.,Useful in search inputs.
+What are promises in JavaScript?,Objects representing eventual completion/failure of async operation.,Use .then() or async/await.
+What is SSR in MERN?,Rendering pages on the server before sending to client.,Use Next.js for easier SSR.
+"What is useReducer hook?",A React hook for managing complex state logic.,Alternative to useState for state transitions.
+What is useCallback?,Returns a memoized version of a callback function.,Use to avoid re-rendering child components.
+What is a 404 error?,"	Resource not found.",Handle it with a fallback route in Express.
+What is a proxy in development?,Routes frontend API calls to the backend server.,"Set ""proxy"": ""http://localhost:5000"" in package.json."
